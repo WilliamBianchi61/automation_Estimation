@@ -7,7 +7,10 @@ import os
 #imports from
 
 from product_fit import bin_type_selector
+from product_fit import  unfit_product
 
 # combine all functions here to start program
 
-bin_type_selector()
+autoStore_bin_size = bin_type_selector()
+
+unfit_product(autoStore_bin_size)
