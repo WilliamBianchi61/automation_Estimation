@@ -14,3 +14,9 @@ from product_fit import  unfit_product
 autoStore_bin_size = bin_type_selector()
 
 unfit_product(autoStore_bin_size)
+
+arry = np.array([10,4,5])
+
+newarry =arry/10
+
+print (newarry)
