@@ -14,3 +14,4 @@ from product_fit import  unfit_product
 autoStore_bin_size = bin_type_selector()
 
 unfit_product(autoStore_bin_size)
+

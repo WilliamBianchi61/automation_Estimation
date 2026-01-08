@@ -43,9 +43,13 @@ def unfit_product(autoStore_bin_size):
     sorted_list = autoStore_bin_size.sort(False)
     print(sorted_list)
 
-    df = pd.read_csv("data/test_data.csv")
-    df.dropna
-    df.filter
+    df_main = pd.read_csv("data/test_data.csv")
+    df_main.dropna # drops any null or N/A values from
+    
+    df_unfit = pd.DataFrame(columns=df_main.columns)
+    
+    
+    df_unfit = df_main.loc[df.height]
 
 
 

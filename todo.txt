@@ -1,0 +1,10 @@
+TO DO
+
+ARNE just that is in the AS 
+
+ARN in AS and VNA 
+
+
+data is all clean just require the dims
+
+use pandas form a data frame and then parse the data through
