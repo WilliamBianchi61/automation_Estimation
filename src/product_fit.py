@@ -11,7 +11,7 @@ def bin_type_selector():
 
     autoStore_bin_size = [3]
     
-    unit_type = input("What units: ")
+    unit_type = input("What Storage location: ")
     #bin type switch
     match autostore_bin_type:
         case "220":
@@ -40,20 +40,26 @@ def bin_type_selector():
     return autoStore_bin_size
 
 def unfit_product(autoStore_bin_size):
-    sorted_list = autoStore_bin_size.sort(False)
-    print(sorted_list)
+    df = pd.read_csv("csvfile.csv")
+    product_dims = df
 
-    df_main = pd.read_csv("data/test_data.csv")
-    df_main.dropna # drops any null or N/A values from
-    
-    df_unfit = pd.DataFrame(columns=df_main.columns)
-    
-    
-    df_unfit = df_main.loc[df.height]
+    bin_dims = autoStore_bin_size
+
+    sorted_bin_dims = sorted(bin_dims)
+
+    item_dims = df[['height','width','depth']].to_numpy
+    item_dims.sort(axis=1)
+
+    mask =(
+        (item_dims[:, 0] <= sorted_bin_dims[0]) &
+        (item_dims[:, 1] <= sorted_bin_dims[1]) &
+        (item_dims[:, 2] <= sorted_bin_dims[2]))
+
+    df_filtered = df[mask]
+
+    return df_filtered
 
 
+def bin_count(df_filtered):
 
-
-
-
-
+    print(df_filtered)
