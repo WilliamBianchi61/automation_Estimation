@@ -8,6 +8,7 @@ import os
 
 from product_fit import bin_type_selector
 from product_fit import  unfit_product
+from product_fit import  bin_count
 
 # combine all functions here to start program
 
@@ -15,3 +16,4 @@ autoStore_bin_size = bin_type_selector()
 
 unfit_product(autoStore_bin_size)
 
+bin_count(df_filtered)
